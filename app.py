@@ -31,10 +31,9 @@ from components.cards import (
     renderizar_card_produto
 )
 
-from pages.clientes import (
-    pagina_clientes,
-    pagina_produtos
-)
+from pages.clientes import pagina_clientes
+from pages.produtos import pagina_produtos
+
 
 # ==========================================
 # CONFIG
