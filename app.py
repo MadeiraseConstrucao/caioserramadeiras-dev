@@ -36,6 +36,17 @@ from pages.produtos import pagina_produtos
 
 from components.sidebar import renderizar_sidebar
 
+from config.settings import (
+    APP_TITLE,
+    LOGO_PATH,
+    PAGINA_MENU,
+    PAGINA_CLIENTES,
+    PAGINA_PRODUTOS
+)
+
+
+
+
 
 
 # ==========================================
@@ -43,11 +54,13 @@ from components.sidebar import renderizar_sidebar
 # ==========================================
 
 st.set_page_config(
-    page_title="Consulta Pangeia",
-    page_icon="logo.png",
+    page_title=APP_TITLE,
+    page_icon=LOGO_PATH,
     layout="wide",
     initial_sidebar_state="expanded"
 )
+
+
 
 # ==========================================
 # CSS GLOBAL
@@ -63,7 +76,6 @@ def carregar_css():
         )
 
 carregar_css()
-
 
 
 
@@ -98,6 +110,8 @@ if "busca_produto" not in st.session_state:
 # ==========================================
 
 renderizar_sidebar()
+
+
 
 # ==========================================
 # MENU PRINCIPAL
@@ -156,8 +170,6 @@ def pagina_menu():
 
             st.session_state.pagina = "produtos"
             st.rerun()
-
-
 
 
 
