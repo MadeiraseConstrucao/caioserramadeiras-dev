@@ -1,4 +1,4 @@
-# Código Refatorado — Consulta Pangeia
+# area de desenvolvimento do site de utilidades da madeiras e construção
 
 
 # ==========================================
@@ -11,6 +11,16 @@ import streamlit.components.v1 as components
 import re
 import base64
 import unicodedata
+
+from utils.helpers import (
+    tratar,
+    limpar_texto,
+    formatar_preco,
+    mostrar_sem_busca,
+    mostrar_total_resultados,
+    mostrar_logo
+)
+
 
 # ==========================================
 # CONFIG
@@ -42,74 +52,6 @@ carregar_css()
 # FUNÇÕES
 # ==========================================
 
-def tratar(valor, padrao=""):
-
-    if pd.isna(valor):
-        return padrao
-
-    valor = str(valor).strip()
-
-    return valor if valor else padrao
-
-
-def limpar_texto(texto):
-
-    texto = str(texto).lower()
-
-    texto = unicodedata.normalize("NFKD", texto)
-    texto = texto.encode("ASCII", "ignore").decode("utf-8")
-
-    return re.sub(r'[^0-9a-zA-Z]', '', texto)
-
-
-def mostrar_logo(caminho, largura=180):
-
-    with open(caminho, "rb") as img:
-        b64 = base64.b64encode(img.read()).decode()
-
-    st.markdown(f"""
-    <div style="text-align:center; margin-bottom:25px;">
-        <img src="data:image/png;base64,{b64}" width="{largura}">
-    </div>
-    """, unsafe_allow_html=True)
-
-
-def formatar_preco(valor_preco):
-
-    if pd.isna(valor_preco):
-        return "SEM PREÇO"
-
-    try:
-
-        if isinstance(valor_preco, (int, float)):
-
-            preco_float = float(valor_preco)
-
-        else:
-
-            preco_texto = (
-                str(valor_preco)
-                .replace("R$", "")
-                .replace(" ", "")
-                .replace(".", "")
-                .replace(",", ".")
-                .strip()
-            )
-
-            preco_float = float(preco_texto)
-
-        return (
-            f"R$ {preco_float:,.2f}"
-            .replace(",", "X")
-            .replace(".", ",")
-            .replace("X", ".")
-        )
-
-    except:
-
-        return str(valor_preco)
-
-
 def buscar_dataframe(df, busca):
 
     busca_limpa = limpar_texto(busca)
@@ -131,25 +73,6 @@ def buscar_dataframe(df, busca):
     )
 
     return resultado
-
-
-def mostrar_sem_busca():
-
-    st.markdown("""
-    <div class="sem-busca">
-        🔎 Digite algo para pesquisar
-    </div>
-    """, unsafe_allow_html=True)
-
-
-def mostrar_total_resultados(total):
-
-    st.markdown(f"""
-    <div class="resultado">
-    <b>Resultados encontrados:</b> {total}
-    </div>
-    """, unsafe_allow_html=True)
-
 
 # ==========================================
 # CARREGAR DADOS
