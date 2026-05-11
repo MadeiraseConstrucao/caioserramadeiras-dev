@@ -1,7 +1,7 @@
 import streamlit as st
 
 from components.cards import renderizar_card_cliente
-
+from services.search import buscar_dataframe
 from utils.helpers import (
     mostrar_sem_busca,
     mostrar_total_resultados
