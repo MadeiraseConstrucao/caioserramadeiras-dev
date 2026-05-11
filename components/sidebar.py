@@ -2,23 +2,25 @@ import streamlit as st
 from utils.helpers import mostrar_logo
 
 
-with st.sidebar:
+def renderizar_sidebar():
 
-    mostrar_logo("logo.png", 150)
+    with st.sidebar:
 
-    st.markdown("---")
+        mostrar_logo("logo.png", 150)
 
-    if st.button("🏠 Menu Inicial", use_container_width=True):
+        st.markdown("---")
 
-        st.session_state.pagina = "menu"
-        st.rerun()
+        if st.button("🏠 Menu Inicial", use_container_width=True):
 
-    if st.button("👥 Clientes", use_container_width=True):
+            st.session_state.pagina = "menu"
+            st.rerun()
 
-        st.session_state.pagina = "clientes"
-        st.rerun()
+        if st.button("👥 Clientes", use_container_width=True):
 
-    if st.button("📦 Produtos", use_container_width=True):
+            st.session_state.pagina = "clientes"
+            st.rerun()
 
-        st.session_state.pagina = "produtos"
-        st.rerun()
+        if st.button("📦 Produtos", use_container_width=True):
+
+            st.session_state.pagina = "produtos"
+            st.rerun()
