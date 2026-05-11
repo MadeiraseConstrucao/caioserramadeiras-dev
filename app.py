@@ -21,6 +21,10 @@ from utils.helpers import (
     mostrar_logo
 )
 
+from services.loaders import (
+    carregar_clientes,
+    carregar_produtos
+)
 
 # ==========================================
 # CONFIG
@@ -73,74 +77,6 @@ def buscar_dataframe(df, busca):
     )
 
     return resultado
-
-# ==========================================
-# CARREGAR DADOS
-# ==========================================
-
-@st.cache_data
-def carregar_clientes():
-
-    df = pd.read_excel("Clientes_tratado.xlsx")
-
-    # ==========================================
-    # NORMALIZAR COLUNAS
-    # ==========================================
-
-    df.columns = (
-        df.columns
-        .str.strip()
-        .str.upper()
-    )
-
-    # ==========================================
-    # COLUNA DE BUSCA OTIMIZADA
-    # ==========================================
-
-    colunas_busca = [
-        "NOME",
-        "NOME FANTASIA",
-        "CNPJ",
-    ]
-    
-    df["BUSCA"] = (
-        df[colunas_busca]
-        .fillna("")
-        .astype(str)
-        .apply(lambda linha: " ".join(linha), axis=1)
-        .apply(limpar_texto)
-    )
-
-    return df
-
-
-@st.cache_data
-def carregar_produtos():
-
-    df = pd.read_excel("Produtos.xlsx")
-
-    # ==========================================
-    # NORMALIZAR COLUNAS
-    # ==========================================
-
-    df.columns = (
-        df.columns
-        .str.strip()
-        .str.upper()
-    )
-
-    # ==========================================
-    # COLUNA DE BUSCA OTIMIZADA
-    # ==========================================
-
-    df["BUSCA"] = (
-        df.fillna("")
-        .astype(str)
-        .apply(lambda linha: " ".join(linha), axis=1)
-        .apply(limpar_texto)
-    )
-
-    return df
 
 # ==========================================
 # DATAFRAMES
