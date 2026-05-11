@@ -187,9 +187,9 @@ if st.session_state.pagina == "menu":
 
 elif st.session_state.pagina == "clientes":
 
-    pagina_clientes()
+    pagina_clientes(df_clientes)
 
 elif st.session_state.pagina == "produtos":
 
-    pagina_produtos()
+    pagina_produtos(df_produtos)
 
