@@ -61,31 +61,8 @@ def carregar_css():
 
 carregar_css()
 
-# ==========================================
-# FUNÇÕES
-# ==========================================
 
-def buscar_dataframe(df, busca):
 
-    busca_limpa = limpar_texto(busca)
-
-    resultado = df[
-        df["BUSCA"].str.contains(busca_limpa, na=False)
-    ].copy()
-
-    # ==========================================
-    # PRIORIDADE
-    # ==========================================
-
-    resultado["PRIORIDADE"] = resultado["BUSCA"].apply(
-        lambda x: 0 if x.startswith(busca_limpa) else 1
-    )
-
-    resultado = resultado.sort_values(
-        by="PRIORIDADE"
-    )
-
-    return resultado
 
 # ==========================================
 # DATAFRAMES
@@ -95,6 +72,8 @@ with st.spinner("Carregando sistema..."):
 
     df_clientes = carregar_clientes()
     df_produtos = carregar_produtos()
+
+
 
 # ==========================================
 # SESSION STATE
@@ -108,6 +87,8 @@ if "busca_cliente" not in st.session_state:
 
 if "busca_produto" not in st.session_state:
     st.session_state.busca_produto = ""
+
+
 
 # ==========================================
 # SIDEBAR
