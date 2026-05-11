@@ -12,7 +12,7 @@ from utils.helpers import (
 # PÁGINA PRODUTOS
 # ==========================================
 
-def pagina_produtos():
+def pagina_produtos(df_produtos):
 
     st.markdown(
         "<div class='section-title'>📦 CONSULTA DE PRODUTOS</div>",
