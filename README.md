@@ -4,9 +4,9 @@ A principio criado para consultar clientes e protudos cadastrados no antigo ERP 
 
 Inicialmente foi criado um unico codigo app.py, porém pensando em futuras melhorias e manutenções estou fazendo a modularização do código separando em:
 
-CSS
-Funçôes
-Carregadores
-Cards
-Páginas
+CSS;
+Funções;
+Carregadores;
+Cards;
+Páginas;
 
