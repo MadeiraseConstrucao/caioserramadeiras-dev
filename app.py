@@ -34,6 +34,9 @@ from components.cards import (
 from pages.clientes import pagina_clientes
 from pages.produtos import pagina_produtos
 
+from components.sidebar import renderizar_sidebar
+
+
 
 # ==========================================
 # CONFIG
@@ -94,26 +97,7 @@ if "busca_produto" not in st.session_state:
 # SIDEBAR
 # ==========================================
 
-with st.sidebar:
-
-    mostrar_logo("logo.png", 150)
-
-    st.markdown("---")
-
-    if st.button("🏠 Menu Inicial", use_container_width=True):
-
-        st.session_state.pagina = "menu"
-        st.rerun()
-
-    if st.button("👥 Clientes", use_container_width=True):
-
-        st.session_state.pagina = "clientes"
-        st.rerun()
-
-    if st.button("📦 Produtos", use_container_width=True):
-
-        st.session_state.pagina = "produtos"
-        st.rerun()
+renderizar_sidebar()
 
 # ==========================================
 # MENU PRINCIPAL
