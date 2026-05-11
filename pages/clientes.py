@@ -8,7 +8,7 @@ from utils.helpers import (
 )
 
 
-def pagina_clientes():
+def pagina_clientes(df_clientes):
 
     st.markdown(
         "<div class='section-title'>👥 CONSULTA DE CLIENTES</div>",
