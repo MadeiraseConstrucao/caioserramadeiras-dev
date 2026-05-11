@@ -30,6 +30,12 @@ from components.cards import (
     renderizar_card_cliente,
     renderizar_card_produto
 )
+
+from pages.clientes import (
+    pagina_clientes,
+    pagina_produtos
+)
+
 # ==========================================
 # CONFIG
 # ==========================================
@@ -190,87 +196,6 @@ def pagina_menu():
 
 
 
-# ==========================================
-# PÁGINA CLIENTES
-# ==========================================
-
-def pagina_clientes():
-
-    st.markdown(
-        "<div class='section-title'>👥 CONSULTA DE CLIENTES</div>",
-        unsafe_allow_html=True
-    )
-
-    busca = st.text_input(
-        "🔎 Buscar cliente",
-        key="busca_cliente",
-        placeholder="Digite nome, CNPJ..."
-    )
-
-    if not busca:
-
-        mostrar_sem_busca()
-        return
-
-    with st.spinner("Pesquisando clientes..."):
-
-        resultado = buscar_dataframe(df_clientes, busca)
-
-        resultado = resultado.head(50)
-
-    mostrar_total_resultados(len(resultado))
-
-    for _, row in resultado.iterrows():
-
-        renderizar_card_cliente(row)
-
-
-
-# ==========================================
-# PÁGINA PRODUTOS
-# ==========================================
-
-def pagina_produtos():
-
-    st.markdown(
-        "<div class='section-title'>📦 CONSULTA DE PRODUTOS</div>",
-        unsafe_allow_html=True
-    )
-
-    busca = st.text_input(
-        "🔎 Buscar produto",
-        key="busca_produto",
-        placeholder="Digite descrição, NCM, unidade..."
-    )
-    
-
-    if not busca:
-
-        mostrar_sem_busca()
-        return
-
-    with st.spinner("Pesquisando produtos..."):
-
-        resultado = buscar_dataframe(
-            df_produtos,
-            busca
-        )
-
-        resultado = resultado.head(50)
-
-    mostrar_total_resultados(len(resultado))
-
-    # ==========================================
-    # GRID RESPONSIVO
-    # ==========================================
-
-    colunas = st.columns(2)
-
-    for i, (_, row) in enumerate(resultado.iterrows()):
-
-        with colunas[i % 2]:
-
-            renderizar_card_produto(row)
 
 # ==========================================
 # ROTEAMENTO
