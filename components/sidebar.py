@@ -12,6 +12,11 @@ from config.settings import (
 )
 
 
+
+# ==========================================
+# SIDEBAR
+# ==========================================
+
 def renderizar_sidebar():
 
     with st.sidebar:
