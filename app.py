@@ -33,6 +33,7 @@ from components.cards import (
 
 from pages.clientes import pagina_clientes
 from pages.produtos import pagina_produtos
+from pages.orientacao_porta import pagina_orientacao_porta
 
 from components.sidebar import renderizar_sidebar
 
@@ -188,4 +189,8 @@ elif st.session_state.pagina == "clientes":
 elif st.session_state.pagina == "produtos":
 
     pagina_produtos(df_produtos)
+
+elif st.session_state.pagina == PAGINA_ORIENTACAO_PORTA:
+
+    pagina_orientacao_porta()
 
