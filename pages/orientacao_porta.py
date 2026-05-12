@@ -7,6 +7,6 @@ import streamlit as st
 
 def pagina_orientacao_porta():
 
-    st.title("🚪 Orientação Visual de Porta")
+    st.title("🚪 ORIENTAÇÃO VISUAL DE PORTA")
 
     st.info("Página em desenvolvimento")
