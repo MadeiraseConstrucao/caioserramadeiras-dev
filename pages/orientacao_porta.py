@@ -7,6 +7,9 @@ import streamlit as st
 
 def pagina_orientacao_porta():
 
-    st.title("🚪 ORIENTAÇÃO VISUAL DE PORTA")
+    st.markdown(
+        "<div class='section-title'🚪 ORIENTAÇÃO VISUAL DE PORTA</div>",
+        unsafe_allow_html=True
+    )
 
     st.info("Página em desenvolvimento")
