@@ -1,4 +1,21 @@
 import streamlit as st
+
+from config.settings import (
+    PAGINA_CLIENTES,
+    PAGINA_PRODUTOS,
+    PAGINA_ORIENTACAO_PORTA
+)
+
+
+# ==========================================
+# MENU PRINCIPAL
+# ==========================================
+
+def pagina_menu():
+
+    st.markdown(
+        "<div class='main-title'>UTILITÁRIOS MADEIRAS E CONSTRUÇÃO</div>",
+        unsafe_allow_html=True
     )
 
     st.markdown(
@@ -22,13 +39,24 @@ import streamlit as st
             "Consulta rápida de clientes e produtos."
         )
 
+        st.markdown("#### Submenus")
+
         if st.button(
-            "ABRIR CONSULTA",
+            "👥 Clientes",
             use_container_width=True,
-            key="menu_consulta"
+            key="menu_clientes"
         ):
 
             st.session_state.pagina = PAGINA_CLIENTES
+            st.rerun()
+
+        if st.button(
+            "📦 Produtos",
+            use_container_width=True,
+            key="menu_produtos"
+        ):
+
+            st.session_state.pagina = PAGINA_PRODUTOS
             st.rerun()
 
     # ==========================================
@@ -37,14 +65,16 @@ import streamlit as st
 
     with col2:
 
-        st.markdown("### 🚪 Orientação Visual")
+        st.markdown("### 🚪 Portas")
 
         st.markdown(
-            "Ferramenta visual para orientação de abertura de portas."
+            "Ferramentas relacionadas a portas."
         )
 
+        st.markdown("#### Submenus")
+
         if st.button(
-            "ABRIR ORIENTAÇÃO",
+            "🚪 Orientação Visual",
             use_container_width=True,
             key="menu_porta"
         ):
@@ -53,7 +83,7 @@ import streamlit as st
             st.rerun()
 
     # ==========================================
-    # FUTURO
+    # ENTREGAS
     # ==========================================
 
     with col3:
@@ -61,7 +91,10 @@ import streamlit as st
         st.markdown("### 🚚 Entregas")
 
         st.markdown(
-            "Consulta e acompanhamento de entregas."
+            "Ferramentas de logística e entrega."
         )
 
+        st.markdown("#### Submenus")
+
         st.info("Em desenvolvimento")
+
