@@ -179,7 +179,7 @@ def pagina_menu():
 # ROTEAMENTO
 # ==========================================
 
-if st.session_state.pagina == "menu":
+if st.session_state.pagina == PAGINA_MENU:
 
     pagina_menu()
 
