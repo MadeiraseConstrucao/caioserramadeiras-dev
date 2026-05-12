@@ -1,4 +1,17 @@
 import streamlit as st
+
+from utils.helpers import mostrar_logo
+
+from config.settings import (
+    LOGO_PATH,
+    PAGINA_MENU,
+    PAGINA_CLIENTES,
+    PAGINA_PRODUTOS,
+    PAGINA_ORIENTACAO_PORTA,
+    PAGINA_ENTREGAS
+)
+
+
 def renderizar_sidebar():
 
     with st.sidebar:
