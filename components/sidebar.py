@@ -1,26 +1,74 @@
 import streamlit as st
-from utils.helpers import mostrar_logo
-
-
 def renderizar_sidebar():
 
     with st.sidebar:
 
-        mostrar_logo("logo.png", 150)
+        mostrar_logo(LOGO_PATH, 150)
 
         st.markdown("---")
 
-        if st.button("🏠 Menu Inicial", use_container_width=True):
+        st.markdown("### 🏠 Menu Principal")
 
-            st.session_state.pagina = "menu"
+        if st.button(
+            "INÍCIO",
+            use_container_width=True
+        ):
+
+            st.session_state.pagina = PAGINA_MENU
             st.rerun()
 
-        if st.button("👥 Clientes", use_container_width=True):
+        st.markdown("---")
 
-            st.session_state.pagina = "clientes"
+        # ==========================================
+        # CONSULTA PANGEIA
+        # ==========================================
+
+        st.markdown("### 🔎 Consulta Pangeia")
+
+        if st.button(
+            "👥 Clientes",
+            use_container_width=True
+        ):
+
+            st.session_state.pagina = PAGINA_CLIENTES
             st.rerun()
 
-        if st.button("📦 Produtos", use_container_width=True):
+        if st.button(
+            "📦 Produtos",
+            use_container_width=True
+        ):
 
-            st.session_state.pagina = "produtos"
+            st.session_state.pagina = PAGINA_PRODUTOS
+            st.rerun()
+
+        st.markdown("---")
+
+        # ==========================================
+        # ORIENTAÇÃO PORTA
+        # ==========================================
+
+        st.markdown("### 🚪 Portas")
+
+        if st.button(
+            "Orientação Visual",
+            use_container_width=True
+        ):
+
+            st.session_state.pagina = PAGINA_ORIENTACAO_PORTA
+            st.rerun()
+
+        st.markdown("---")
+
+        # ==========================================
+        # ENTREGAS
+        # ==========================================
+
+        st.markdown("### 🚚 Entregas")
+
+        if st.button(
+            "Consulta Entregas",
+            use_container_width=True
+        ):
+
+            st.session_state.pagina = PAGINA_ENTREGAS
             st.rerun()
