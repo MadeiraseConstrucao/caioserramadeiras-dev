@@ -42,7 +42,8 @@ from config.settings import (
     LOGO_PATH,
     PAGINA_MENU,
     PAGINA_CLIENTES,
-    PAGINA_PRODUTOS
+    PAGINA_PRODUTOS,
+    PAGINA_ORIENTACAO_PORTA,
 )
 
 
