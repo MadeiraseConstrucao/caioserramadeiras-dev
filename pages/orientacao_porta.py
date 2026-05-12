@@ -8,7 +8,7 @@ import streamlit as st
 def pagina_orientacao_porta():
 
     st.markdown(
-        "<div class='section-title'🚪 ORIENTAÇÃO VISUAL DE PORTA</div>",
+        "<div class='section-title'>🚪 ORIENTAÇÃO VISUAL DE PORTA</div>",
         unsafe_allow_html=True
     )
 
