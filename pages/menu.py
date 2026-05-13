@@ -68,12 +68,16 @@ def pagina_menu():
 
     with col2:
 
-        st.markdown("### 🚪 PORTAS")
-
         st.markdown(
-            "Ferramentas relacionadas a portas."
+            """
+            <div class='menu-card'>
+                <h3>🔎 🚪 PORTAS</h3>
+                <p>Ferramentas relacionadas a portas..</p>
+            </div>
+            """,
+            unsafe_allow_html=True
         )
-
+        
         if st.button(
             "🚪 Orientação Visual",
             use_container_width=True,
@@ -89,11 +93,16 @@ def pagina_menu():
 
     with col3:
 
-        st.markdown("### 🚚 ENTREGAS")
-
         st.markdown(
-            "Ferramentas de logística e entrega."
+            """
+            <div class='menu-card'>
+                <h3>🔎 🚚 ENTREGAS</h3>
+                <p>Ferramentas de logística e entrega...</p>
+            </div>
+            """,
+            unsafe_allow_html=True
         )
+        
 
         st.info("Em desenvolvimento")
 
