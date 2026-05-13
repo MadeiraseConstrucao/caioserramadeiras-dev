@@ -68,7 +68,7 @@ def renderizar_sidebar():
         st.markdown("### 🚪 PORTAS")
 
         if st.button(
-            "Orientação Visual",
+            "ORIENTAÇÃO VISAL",
             use_container_width=True
         ):
 
@@ -84,7 +84,7 @@ def renderizar_sidebar():
         st.markdown("### 🚚 ENTREGAS")
 
         if st.button(
-            "Consulta Entregas",
+            "CONSULTAR ENTREGAS",
             use_container_width=True
         ):
 
