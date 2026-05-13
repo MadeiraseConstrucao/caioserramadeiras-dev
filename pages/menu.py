@@ -33,7 +33,6 @@ def pagina_menu():
 
     with col1:
 
-
         st.markdown(
             """
             <div class='menu-card'>
