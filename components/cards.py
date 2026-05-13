@@ -71,7 +71,7 @@ def renderizar_card_cliente(row):
         </p>
 
     </div>
-    
+    """
 
     components.html(card_html, height=550)
 
