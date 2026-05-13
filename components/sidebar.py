@@ -84,7 +84,7 @@ def renderizar_sidebar():
         st.markdown("### 🚚 ENTREGAS")
 
         if st.button(
-            "CONSULTAR ENTREGAS",
+            "CONSULTAR ENTREGA",
             use_container_width=True
         ):
 
