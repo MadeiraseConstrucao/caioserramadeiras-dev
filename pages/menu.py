@@ -103,6 +103,15 @@ def pagina_menu():
             unsafe_allow_html=True
         )
         
+        
+        st.markdown(
+            """
+            <div class='badge-dev'>
+                EM DESENVOLVIMENTO...
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
 
-        st.info("Em desenvolvimento")
+
 
