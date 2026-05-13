@@ -27,24 +27,32 @@ def pagina_orientacao_porta():
             "NÚMERO DO PEDIDO:"
         )
 
-        nome_cliente = st.text_input(
-            "NOME DO CLIENTE"
+        vendedor = st.text_input(
+            "NOME DO CLIENTE:"
         )
 
-        vendedor = st.text_input(
-            "VENDEDOR(A)"
+        nome_cliente = st.selectbox(
+            "VENDEDOR(A):"
+            [
+                "CAIO",
+                "FIAMMA",         
+                "LAISA",
+                "LUCIANA",
+                "PRISCYLA",
+                "THALIA"
+            ]
         )
 
         medidas_porta = st.text_input(
-            "MEDIDAS DA PORTA"
+            "MEDIDAS DA PORTA:"
         )
 
         largura_batente = st.text_input(
-            "LARGURA DO BATENTE"
+            "LARGURA DO BATENTE:"
         )
 
         vendo_de = st.selectbox(
-            "VENDO DE",
+            "VENDO DE:",
             [
                 "DENTRO",
                 "FORA"
@@ -52,7 +60,7 @@ def pagina_orientacao_porta():
         )
 
         abre_para = st.selectbox(
-            "ABRE PARA",
+            "ABRE PARA:",
             [
                 "FORA DO AMBIENTE",
                 "DENTRO DO AMBIENTE"
@@ -60,7 +68,7 @@ def pagina_orientacao_porta():
         )
         
         lado_abertura = st.selectbox(
-            "LADO DE ABERTURA",
+            "LADO DE ABERTURA:",
             [
                 "DIREITA",
                 "ESQUERDA"
@@ -68,7 +76,7 @@ def pagina_orientacao_porta():
         )
 
         upload_pdf = st.file_uploader(
-            "PDF DO ORÇAMENTO",
+            "PDF DO ORÇAMENTO:",
             type=["pdf"],
             accept_multiple_files=False
         )
