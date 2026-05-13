@@ -33,39 +33,7 @@ def renderizar_card_cliente(row):
     bairro = row.get("BAIRRO", "")
     uf = row.get("UF", "")
 
-    card_html = f"""
-
-
-
-    <style>
-    
-    .card {
-        background: rgba(255,255,255,0.05);
-        color: inherit;
-        border: 1px solid rgba(128,128,128,0.25);
-        padding: 28px;
-        border-radius: 18px;
-        margin-bottom: 18px;
-        min-height: 320px;
-        transition: 0.25s;
-    }
-    
-    .card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0px 8px 25px rgba(0,0,0,0.20);
-    }
-    
-    .card * {
-        color: inherit !important;
-    }
-    .card hr {
-        border: 1px solid rgba(128,128,128,0.25);
-    }
-    
-    </style>
-
-
-        
+    card_html = f"""        
     <div class="card">
 
         <h2>🏢 {razao_social}</h2>
