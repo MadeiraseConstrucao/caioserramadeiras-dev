@@ -25,7 +25,7 @@ def renderizar_sidebar():
 
         st.markdown("---")
 
-        st.markdown("### 🏠 Menu Principal")
+        st.markdown("### 🏠 MENU PRINCIPAL")
 
         if st.button(
             "INÍCIO",
@@ -41,10 +41,10 @@ def renderizar_sidebar():
         # CONSULTA PANGEIA
         # ==========================================
 
-        st.markdown("### 🔎 Consulta Pangeia")
+        st.markdown("### 🔎 CONSULTA PANGEIA")
 
         if st.button(
-            "👥 Clientes",
+            "👥 CLIENTES",
             use_container_width=True
         ):
 
@@ -52,7 +52,7 @@ def renderizar_sidebar():
             st.rerun()
 
         if st.button(
-            "📦 Produtos",
+            "📦 PRODUTOS",
             use_container_width=True
         ):
 
@@ -65,7 +65,7 @@ def renderizar_sidebar():
         # ORIENTAÇÃO PORTA
         # ==========================================
 
-        st.markdown("### 🚪 Portas")
+        st.markdown("### 🚪 PORTAS")
 
         if st.button(
             "Orientação Visual",
@@ -81,7 +81,7 @@ def renderizar_sidebar():
         # ENTREGAS
         # ==========================================
 
-        st.markdown("### 🚚 Entregas")
+        st.markdown("### 🚚 ENTREGAS")
 
         if st.button(
             "Consulta Entregas",
