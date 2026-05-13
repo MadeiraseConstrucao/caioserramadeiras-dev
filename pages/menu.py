@@ -90,7 +90,5 @@ def pagina_menu():
             "Ferramentas de logística e entrega."
         )
 
-        st.markdown("#### Submenus")
-
         st.info("Em desenvolvimento")
 
