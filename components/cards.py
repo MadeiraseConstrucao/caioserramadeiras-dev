@@ -36,11 +36,12 @@ def renderizar_card_cliente(row):
     card_html = f"""
 
 
+
     <style>
     
     .card {
-        background: var(--background-color);
-        color: var(--text-color);
+        background: rgba(255,255,255,0.05);
+        color: inherit;
         border: 1px solid rgba(128,128,128,0.25);
         padding: 28px;
         border-radius: 18px;
@@ -55,14 +56,14 @@ def renderizar_card_cliente(row):
     }
     
     .card * {
-        color: var(--text-color) !important;
+        color: inherit !important;
     }
-    
     .card hr {
         border: 1px solid rgba(128,128,128,0.25);
     }
     
     </style>
+
 
         
     <div class="card">
@@ -102,7 +103,7 @@ def renderizar_card_cliente(row):
         </p>
 
     </div>
-    """
+    
 
     components.html(card_html, height=550)
 
