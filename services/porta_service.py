@@ -1,10 +1,6 @@
 import requests
 
 
-# ==========================================
-# ENVIAR PEDIDO
-# ==========================================
-
 def enviar_pedido_porta(dados):
 
     WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzeadb3308jmUg1YBHSGB2XEA-fJ8JKNMKQ2QRe3hvqL5EDSPUDM6rU4LvWMJPQF2UwQQ/exec"
@@ -15,14 +11,8 @@ def enviar_pedido_porta(dados):
         timeout=60
     )
 
-    print("STATUS:")
-    print(response.status_code)
-
-    print("RESPOSTA:")
-    print(response.text)
-
     return {
-        "success": True,
-        "response": response.text
+        "status_code": response.status_code,
+        "texto": response.text
     }
 
