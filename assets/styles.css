@@ -170,6 +170,21 @@ BOTÕES
     transform:translateY(-2px);
 }
 
+
+/* ==========================================
+CENTRALIZAÇÃO
+========================================== */
+
+.centralizado {
+    text-align: center;
+}
+
+.menu-card {
+    text-align: center;
+    padding: 15px;
+}
+
+
 /* ==========================================
 MOBILE
 ========================================== */
