@@ -121,8 +121,9 @@ def pagina_orientacao_porta():
             resposta = enviar_pedido_porta(dados)
 
         if resposta.get("success"):
-
-            st.success("Pedido enviado com sucesso")
+            
+            st.write(resposta)
+            ##st.success("Pedido enviado com sucesso")
 
         else:
 
