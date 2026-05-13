@@ -80,6 +80,7 @@ RESULTADOS
 .resultado {
     font-size:18px;
     margin-bottom:25px;
+    color: white !important;
 }
 
 .sem-busca {
