@@ -34,6 +34,18 @@ def renderizar_card_cliente(row):
     uf = row.get("UF", "")
 
     card_html = f"""
+
+    <style>
+
+    .card {{
+        background:#1e1e1e;
+        padding:22px;
+        border-radius:18px;
+        color:white;
+    }}
+    
+    </style>
+        
     <div class="card">
 
         <h2>🏢 {razao_social}</h2>
