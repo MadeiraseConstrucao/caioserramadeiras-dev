@@ -34,12 +34,12 @@ def pagina_orientacao_porta():
         nome_cliente = st.selectbox(
             "VENDEDOR(A):",
             [
-                "CAIO",
-                "FIAMMA",         
-                "LAISA",
-                "LUCIANA",
-                "PRISCYLA",
-                "THALIA"
+                "CAIO AGUIAR",
+                "FIAMMA CASER",         
+                "LAISA PEREIRA",
+                "LUCIANA CASER",
+                "PRISCYLA MARTINELLI",
+                "THALIA ALCÂNTARA"
             ]
         )
 
