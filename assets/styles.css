@@ -190,6 +190,22 @@ CENTRALIZAÇÃO
 
 
 /* ==========================================
+BADGE EM DESENVOLVIMENTO
+========================================== */
+
+.badge-dev {
+    text-align: center;
+    background-color: #1f2937;
+    color: #facc15;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+/* ==========================================
 MOBILE
 ========================================== */
 
