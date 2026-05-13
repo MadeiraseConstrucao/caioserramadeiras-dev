@@ -15,12 +15,14 @@ def enviar_pedido_porta(dados):
         timeout=60
     )
 
+    print("STATUS:")
+    print(response.status_code)
 
+    print("RESPOSTA:")
     print(response.text)
-    
+
     return {
         "success": True,
         "response": response.text
     }
-
 
