@@ -118,15 +118,14 @@ def pagina_orientacao_porta():
 
         with st.spinner("Gerando pedido..."):
 
-            st.write(resposta)
-            #resposta = enviar_pedido_porta(dados)
+            resposta = enviar_pedido_porta(dados)
 
-        if resposta.get("success"):
+        st.write(resposta)
+
+        #if resposta.get("success"):
             
-            st.write(resposta)
             ##st.success("Pedido enviado com sucesso")
 
-        else:
+        #else:
 
-            st.write(resposta)
             #st.error("Erro ao gerar pedido")
