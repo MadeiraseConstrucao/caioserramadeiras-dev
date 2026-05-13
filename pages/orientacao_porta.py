@@ -32,7 +32,7 @@ def pagina_orientacao_porta():
         )
 
         nome_cliente = st.selectbox(
-            "VENDEDOR(A):"
+            "VENDEDOR(A):",
             [
                 "CAIO",
                 "FIAMMA",         
