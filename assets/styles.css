@@ -178,6 +178,7 @@ CENTRALIZAÇÃO
 .menu-card {
     text-align: center;
     padding: 15px;
+    min-height: 140px;
 }
 
 .menu-card h3 {
