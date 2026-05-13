@@ -119,59 +119,7 @@ renderizar_sidebar()
 # MENU PRINCIPAL
 # ==========================================
 
-def pagina_menu():
 
-    st.markdown(
-        "<div class='main-title'>CONSULTA PANGEIA</div>",
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        "<div class='sub-title'>Sistema de consulta interna</div>",
-        unsafe_allow_html=True
-    )
-
-    col1, col2 = st.columns(2)
-
-    # ==========================================
-    # CLIENTES
-    # ==========================================
-
-    with col1:
-
-        st.markdown("### 👥 Clientes")
-
-        st.markdown(
-            "Consulta rápida por Nome, CNPJ e CPF."
-        )
-
-        if st.button(
-            "ABRIR CONSULTA CLIENTES",
-            use_container_width=True
-        ):
-
-            st.session_state.pagina = "clientes"
-            st.rerun()
-
-    # ==========================================
-    # PRODUTOS
-    # ==========================================
-
-    with col2:
-
-        st.markdown("### 📦 Produtos")
-
-        st.markdown(
-            "Consulta de produtos por Descrição, NCM, Unidade e Preço."
-        )
-
-        if st.button(
-            "ABRIR CONSULTA PRODUTOS",
-            use_container_width=True
-        ):
-
-            st.session_state.pagina = "produtos"
-            st.rerun()
 
 
 
