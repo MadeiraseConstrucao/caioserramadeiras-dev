@@ -126,4 +126,5 @@ def pagina_orientacao_porta():
 
         else:
 
-            st.error("Erro ao gerar pedido")
+            st.write(resposta)
+            #st.error("Erro ao gerar pedido")
