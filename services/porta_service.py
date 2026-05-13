@@ -15,4 +15,12 @@ def enviar_pedido_porta(dados):
         timeout=60
     )
 
-    return response.json()
+
+    print(response.text)
+    
+    return {
+        "success": True,
+        "response": response.text
+    }
+
+
