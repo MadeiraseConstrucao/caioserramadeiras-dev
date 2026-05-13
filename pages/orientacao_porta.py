@@ -24,53 +24,53 @@ def pagina_orientacao_porta():
     with col1:
 
         numero_pedido = st.text_input(
-            "Número do Pedido"
+            "NÚMERO DO PEDIDO:"
         )
 
         nome_cliente = st.text_input(
-            "Nome Cliente"
+            "NOME DO CLIENTE"
         )
 
         vendedor = st.text_input(
-            "Vendedor"
+            "VENDEDOR(A)"
         )
 
         medidas_porta = st.text_input(
-            "Medidas Porta"
+            "MEDIDAS DA PORTA"
         )
 
         largura_batente = st.text_input(
-            "Largura Batente"
-        )
-
-        lado_abertura = st.selectbox(
-            "Lado Abertura",
-            [
-                "DIREITA",
-                "ESQUERDA"
-            ]
-        )
-
-        abre_para = st.selectbox(
-            "Abre Para",
-            [
-                "FORA DO AMBIENTE",
-                "DENTRO DO AMBIENTE"
-            ]
+            "LARGURA DO BATENTE"
         )
 
         vendo_de = st.selectbox(
-            "Vendo De",
+            "VENDO DE",
             [
                 "DENTRO",
                 "FORA"
             ]
         )
 
+        abre_para = st.selectbox(
+            "ABRE PARA",
+            [
+                "FORA DO AMBIENTE",
+                "DENTRO DO AMBIENTE"
+            ]
+        )
+        
+        lado_abertura = st.selectbox(
+            "LADO DE ABERTURA",
+            [
+                "DIREITA",
+                "ESQUERDA"
+            ]
+        )
+
         upload_pdf = st.file_uploader(
-            "Orçamento PDF",
+            "PDF DO ORÇAMENTO",
             type=["pdf"],
-            accept_multiple_files=True
+            accept_multiple_files=False
         )
 
 
@@ -106,14 +106,14 @@ def pagina_orientacao_porta():
     ):
 
         dados = {
-            "numero_pedido": numero_pedido,
-            "nome_cliente": nome_cliente,
-            "vendedor": vendedor,
-            "medidas_porta": medidas_porta,
-            "largura_batente": largura_batente,
-            "lado_abertura": lado_abertura,
-            "abre_para": abre_para,
-            "vendo_de": vendo_de
+            "NUMERO_PEDIDO": numero_pedido,
+            "NOME_CLIENTE": nome_cliente,
+            "VENDEDOR": vendedor,
+            "MEDIDAS_PORTA": medidas_porta,
+            "LARGURA_BATENTE": largura_batente,
+            "LADO_ABERTURA": lado_abertura,
+            "ABRE_PARA": abre_para,
+            "VENDO_DE": vendo_de
         }
 
         with st.spinner("Gerando pedido..."):
