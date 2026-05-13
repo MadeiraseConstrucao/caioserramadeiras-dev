@@ -33,12 +33,18 @@ def pagina_menu():
 
     with col1:
 
-        st.markdown("### 🔎 CONSULTA PANGEIA")
 
         st.markdown(
-            "Consulta rápida de clientes e produtos."
+            """
+            <div class='menu-card'>
+                <h3>🔎 CONSULTA PANGEIA</h3>
+                <p>Consulta rápida de clientes e produtos.</p>
+            </div>
+            """,
+            unsafe_allow_html=True
         )
-
+        
+        
         if st.button(
             "👥 CLIENTES",
             use_container_width=True,
