@@ -33,13 +33,11 @@ def pagina_menu():
 
     with col1:
 
-        st.markdown("### 🔎 Consulta Pangeia")
+        st.markdown("### 🔎 CONSULTA PANGEIA")
 
         st.markdown(
             "Consulta rápida de clientes e produtos."
         )
-
-        st.markdown("#### Submenus")
 
         if st.button(
             "👥 CLIENTES",
@@ -70,8 +68,6 @@ def pagina_menu():
         st.markdown(
             "Ferramentas relacionadas a portas."
         )
-
-        st.markdown("#### Submenus")
 
         if st.button(
             "🚪 Orientação Visual",
