@@ -144,6 +144,32 @@ div[data-baseweb="input"] input {
 }
 
 /* ==========================================
+SELECTBOX
+========================================== */
+
+div[data-baseweb="select"] > div {
+    border: 1px solid #cfcfcf !important;
+    border-radius: 10px !important;
+    min-height: 45px !important;
+    box-shadow: none !important;
+}
+
+/* hover */
+
+div[data-baseweb="select"] > div:hover {
+    border-color: #999999 !important;
+}
+
+/* foco */
+
+div[data-baseweb="select"] > div:focus-within {
+    border-color: #ff7a00 !important;
+    box-shadow: 0 0 0 1px #ff7a00 !important;
+}
+
+
+
+/* ==========================================
 FOCUS INPUT
 ========================================== */
 
