@@ -42,7 +42,7 @@ def pagina_menu():
         st.markdown("#### Submenus")
 
         if st.button(
-            "👥 Clientes",
+            "👥 CLIENTES",
             use_container_width=True,
             key="menu_clientes"
         ):
@@ -51,7 +51,7 @@ def pagina_menu():
             st.rerun()
 
         if st.button(
-            "📦 Produtos",
+            "📦 PRODUTOS",
             use_container_width=True,
             key="menu_produtos"
         ):
@@ -65,7 +65,7 @@ def pagina_menu():
 
     with col2:
 
-        st.markdown("### 🚪 Portas")
+        st.markdown("### 🚪 PORTAS")
 
         st.markdown(
             "Ferramentas relacionadas a portas."
@@ -88,7 +88,7 @@ def pagina_menu():
 
     with col3:
 
-        st.markdown("### 🚚 Entregas")
+        st.markdown("### 🚚 ENTREGAS")
 
         st.markdown(
             "Ferramentas de logística e entrega."
