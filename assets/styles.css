@@ -133,7 +133,7 @@ div[data-baseweb="input"] {
 
     min-height: 45px !important;
 
-    background: white !important;
+    background: transparent !important;
 
     transition: 0.2s ease;
 }
@@ -160,7 +160,7 @@ div[data-baseweb="input"] input {
 
     background: transparent !important;
 
-    color: black !important;
+    color: inherit !important;
 
     border: none !important;
 
@@ -185,7 +185,7 @@ div[data-baseweb="select"] > div {
 
     min-height: 45px !important;
 
-    background: white !important;
+    background: transparent !important;
 
     box-shadow: none !important;
 
