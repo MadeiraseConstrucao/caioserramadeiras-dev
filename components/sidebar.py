@@ -21,7 +21,7 @@ def renderizar_sidebar():
 
     with st.sidebar:
 
-        mostrar_logo(LOGO_PATH, 150)
+        mostrar_logo(LOGO_PATH, 120)
 
         st.markdown("---")
 
