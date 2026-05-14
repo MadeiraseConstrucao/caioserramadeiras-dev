@@ -71,7 +71,7 @@ def pagina_menu():
         st.markdown(
             """
             <div class='menu-card'>
-                <h3>🔎 🚪 PORTAS</h3>
+                <h3>🚪 PORTAS</h3>
                 <p>Ferramentas relacionadas a portas..</p>
             </div>
             """,
