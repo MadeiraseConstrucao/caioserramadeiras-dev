@@ -98,7 +98,7 @@ def pagina_orientacao_porta():
 
             st.image(
                 caminho_imagem,
-                width=500
+                width=650
             )
 
     st.markdown("---")
