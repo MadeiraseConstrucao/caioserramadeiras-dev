@@ -45,7 +45,7 @@ def pagina_menu():
         
         
         if st.button(
-            "👥 CLIENTES",
+            "CLIENTES",
             use_container_width=True,
             key="menu_clientes"
         ):
@@ -54,7 +54,7 @@ def pagina_menu():
             st.rerun()
 
         if st.button(
-            "📦 PRODUTOS",
+            "PRODUTOS",
             use_container_width=True,
             key="menu_produtos"
         ):
@@ -79,7 +79,7 @@ def pagina_menu():
         )
         
         if st.button(
-            "🚪 Orientação Visual",
+            "ORIENTAÇÃO VISUAL",
             use_container_width=True,
             key="menu_porta"
         ):
