@@ -44,7 +44,7 @@ def renderizar_sidebar():
         st.markdown("### 🔎 CONSULTA PANGEIA")
 
         if st.button(
-            "👥 CLIENTES",
+            "CLIENTES",
             use_container_width=True
         ):
 
@@ -52,7 +52,7 @@ def renderizar_sidebar():
             st.rerun()
 
         if st.button(
-            "📦 PRODUTOS",
+            "PRODUTOS",
             use_container_width=True
         ):
 
@@ -80,13 +80,3 @@ def renderizar_sidebar():
         # ==========================================
         # ENTREGAS
         # ==========================================
-
-        st.markdown("### 🚚 ENTREGAS")
-
-        if st.button(
-            "CONSULTAR ENTREGA",
-            use_container_width=True
-        ):
-
-            st.session_state.pagina = PAGINA_ENTREGAS
-            st.rerun()
