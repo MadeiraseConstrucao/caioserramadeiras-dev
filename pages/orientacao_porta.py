@@ -1,5 +1,6 @@
 import streamlit as st
 import json
+resultado = json.loads(resposta["texto"])
 
 
 from components.porta_preview import obter_imagem_porta
@@ -126,7 +127,7 @@ def pagina_orientacao_porta():
             "VENDO_DE": vendo_de
         }
         
-        resultado = json.loads(resposta["texto"])
+        
         
         with st.spinner("GERANDO PDF"):
 
