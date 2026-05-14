@@ -75,11 +75,11 @@ def pagina_orientacao_porta():
             ]
         )
 
-        upload_pdf = st.file_uploader(
-            "PDF DO ORÇAMENTO:",
-            type=["pdf"],
-            accept_multiple_files=False
-        )
+        #upload_pdf = st.file_uploader(
+            #"PDF DO ORÇAMENTO:",
+            #type=["pdf"],
+            #accept_multiple_files=False
+        #)
 
 
     # ======================================
