@@ -109,7 +109,7 @@ def pagina_orientacao_porta():
     # ======================================
 
     if st.button(
-        "GERAR PDP E ENVIAR NO EMAIL",
+        "GERAR PDF E ENVIAR NO EMAIL",
         use_container_width=True
     ):
 
