@@ -27,11 +27,11 @@ def pagina_orientacao_porta():
             "NÚMERO DO PEDIDO:"
         )
 
-        vendedor = st.text_input(
+        nome_cliente = st.text_input(
             "NOME DO CLIENTE:"
         )
 
-        nome_cliente = st.selectbox(
+        vendedor = st.selectbox(
             "VENDEDOR(A):",
             [
                 "CAIO AGUIAR",
