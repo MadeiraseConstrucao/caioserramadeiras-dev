@@ -23,8 +23,6 @@ def renderizar_sidebar():
 
         mostrar_logo(LOGO_PATH, 120)
 
-        st.markdown("---")
-
         st.markdown("### 🏠 MENU PRINCIPAL")
 
         if st.button(
@@ -74,8 +72,6 @@ def renderizar_sidebar():
 
             st.session_state.pagina = PAGINA_ORIENTACAO_PORTA
             st.rerun()
-
-        st.markdown("---")
 
         # ==========================================
         # ENTREGAS
