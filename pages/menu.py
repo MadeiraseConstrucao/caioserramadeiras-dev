@@ -96,7 +96,7 @@ def pagina_menu():
         st.markdown(
             """
             <div class='menu-card'>
-                <h3>🔎 🚚 ENTREGAS</h3>
+                <h3>🚚 ENTREGAS</h3>
                 <p>Ferramentas de logística e entrega...</p>
             </div>
             """,
