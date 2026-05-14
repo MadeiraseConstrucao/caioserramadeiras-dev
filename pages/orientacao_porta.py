@@ -127,16 +127,14 @@ def pagina_orientacao_porta():
             "VENDO_DE": vendo_de
         }
         
-        resultado = json.loads(resposta["texto"])
         
         with st.spinner("GERANDO PDF"):
 
             resposta = enviar_pedido_porta(dados)
+            
+        resultado = json.loads(resposta["texto"])
 
-        st.write(type(resposta))
-        st.write(resposta)
-
-        if resposta.get("success"):
+        if resultado.get("success"):
             
             st.success("PDF ENVIADO NO EMAIL COM SUCESSO")
 
