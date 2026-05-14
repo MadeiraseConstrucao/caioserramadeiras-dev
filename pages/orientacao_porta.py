@@ -128,7 +128,8 @@ def pagina_orientacao_porta():
 
             resposta = enviar_pedido_porta(dados)
 
-        #st.write(resposta)
+        st.write(type(resposta))
+        st.write(resposta)
 
         if resposta.get("success"):
             
