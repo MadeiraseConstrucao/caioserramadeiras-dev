@@ -130,7 +130,7 @@ def pagina_orientacao_porta():
 
         #st.write(resposta)
 
-        if resposta.get("Pedido criado com sucesso"):
+        if resposta.get("success"):
             
             st.success("PDF ENVIADO NO EMAIL COM SUCESSO")
 
