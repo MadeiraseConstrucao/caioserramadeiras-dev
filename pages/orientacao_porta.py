@@ -1,4 +1,6 @@
 import streamlit as st
+import json
+
 
 from components.porta_preview import obter_imagem_porta
 from services.porta_service import enviar_pedido_porta
@@ -123,7 +125,9 @@ def pagina_orientacao_porta():
             "ABRE_PARA": abre_para,
             "VENDO_DE": vendo_de
         }
-
+        
+        resultado = json.loads(resposta["texto"])
+        
         with st.spinner("GERANDO PDF"):
 
             resposta = enviar_pedido_porta(dados)
