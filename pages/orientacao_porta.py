@@ -109,7 +109,7 @@ def pagina_orientacao_porta():
     # ======================================
 
     if st.button(
-        "GERAR PEDIDO",
+        "GERAR PDP E ENVIAR NO EMAIL",
         use_container_width=True
     ):
 
@@ -124,16 +124,16 @@ def pagina_orientacao_porta():
             "VENDO_DE": vendo_de
         }
 
-        with st.spinner("Gerando pedido..."):
+        with st.spinner("GERANDO PDF"):
 
             resposta = enviar_pedido_porta(dados)
 
-        st.write(resposta)
+        #st.write(resposta)
 
-        #if resposta.get("success"):
+        if resposta.get("success"):
             
-            ##st.success("Pedido enviado com sucesso")
+            st.success("PDF ENVIADO NO EMAIL COM SUCESSO")
 
-        #else:
+        else:
 
-            #st.error("Erro ao gerar pedido")
+            st.error("ERRO AO GERAR PDF")
