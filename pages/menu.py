@@ -16,106 +16,108 @@ from config.settings import (
 # MENU PRINCIPAL
 # ==========================================
 
-logo_base64 = imagem_base64(LOGO_PATH)
+
 
 def pagina_menu():
 
     # ==========================================
     # HEADER
     # ==========================================
-
- st.markdown(
-    f"""
-    <style>
-
-    .header-container {{
-        display:flex;
-        align-items:center;
-        justify-content:space-between;
-
-        padding:20px 30px;
-
-        border-radius:20px;
-
-        background: rgba(255,255,255,0.03);
-
-        border:1px solid rgba(255,255,255,0.08);
-
-        margin-bottom:30px;
-    }}
-
-    .header-left {{
-        display:flex;
-        align-items:center;
-        gap:20px;
-    }}
-
-    .header-title h1 {{
-        margin:0;
-        font-size:30px;
-    }}
-
-    .header-title p {{
-        margin:0;
-        opacity:0.7;
-        font-size:15px;
-    }}
-
-    .header-right {{
-        text-align:right;
-    }}
-
-    .version-label {{
-        font-size:13px;
-        opacity:0.6;
-    }}
-
-    .version-number {{
-        font-size:20px;
-        font-weight:bold;
-    }}
-
-    </style>
-
-    <div class="header-container">
-
-        <div class="header-left">
-
-            <img
-                src="data:image/png;base64,{logo_base64}"
-                width="90"
-            >
-
-            <div class="header-title">
-
-                <h1>
-                    UTILITÁRIOS MADEIRAS E CONSTRUÇÃO
-                </h1>
-
-                <p>
-                    Sistema interno de ferramentas
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="header-right">
-
-            <div class="version-label">
-                VERSÃO
-            </div>
-
-            <div class="version-number">
-                v1.0
-            </div>
-
-        </div>
-
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+    
+    logo_base64 = imagem_base64(LOGO_PATH)
+    
+    st.markdown(
+       f"""
+       <style>
+    
+       .header-container {{
+           display:flex;
+           align-items:center;
+           justify-content:space-between;
+    
+           padding:20px 30px;
+    
+           border-radius:20px;
+    
+           background: rgba(255,255,255,0.03);
+    
+           border:1px solid rgba(255,255,255,0.08);
+    
+           margin-bottom:30px;
+       }}
+    
+       .header-left {{
+           display:flex;
+           align-items:center;
+           gap:20px;
+       }}
+    
+       .header-title h1 {{
+           margin:0;
+           font-size:30px;
+       }}
+    
+       .header-title p {{
+           margin:0;
+           opacity:0.7;
+           font-size:15px;
+       }}
+    
+       .header-right {{
+           text-align:right;
+       }}
+    
+       .version-label {{
+           font-size:13px;
+           opacity:0.6;
+       }}
+    
+       .version-number {{
+           font-size:20px;
+           font-weight:bold;
+       }}
+    
+       </style>
+    
+       <div class="header-container">
+    
+           <div class="header-left">
+    
+               <img
+                   src="data:image/png;base64,{logo_base64}"
+                   width="90"
+               >
+    
+               <div class="header-title">
+    
+                   <h1>
+                       UTILITÁRIOS MADEIRAS E CONSTRUÇÃO
+                   </h1>
+    
+                   <p>
+                       Sistema interno de ferramentas
+                   </p>
+    
+               </div>
+    
+           </div>
+    
+           <div class="header-right">
+    
+               <div class="version-label">
+                   VERSÃO
+               </div>
+    
+               <div class="version-number">
+                   v1.0
+               </div>
+    
+           </div>
+    
+       </div>
+       """,
+       unsafe_allow_html=True
+      )
     # ==========================================
     # CONTEÚDO
     # ==========================================
