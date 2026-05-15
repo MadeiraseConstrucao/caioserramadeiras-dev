@@ -1,5 +1,6 @@
 import streamlit as st
 
+from utils.helpers import mostrar_logo
 from config.settings import (
     LOGO_PATH,
     PAGINA_CLIENTES,
@@ -7,26 +8,32 @@ from config.settings import (
     PAGINA_ORIENTACAO_PORTA
 )
 
-mostrar_logo(LOGO_PATH, 120)
+
 # ==========================================
 # MENU PRINCIPAL
 # ==========================================
 
 def pagina_menu():
 
-    st.markdown(
-        "<div class='main-title'>UTILITÁRIOS MADEIRAS E CONSTRUÇÃO</div>",
-        unsafe_allow_html=True
-    )
+    col_logo, col_titulo = st.columns([1, 5])
 
-    st.markdown(
-        "<div class='sub-title'>Sistema interno de ferramentas</div>",
-        unsafe_allow_html=True
-    )
+    with col_logo:
+
+        mostrar_logo(LOGO_PATH, 120)
+
+    with col_titulo:
+
+        st.markdown(
+            "<div class='main-title'>UTILITÁRIOS MADEIRAS E CONSTRUÇÃO</div>",
+            unsafe_allow_html=True
+        )
+
+        st.markdown(
+            "<div class='sub-title'>Sistema interno de ferramentas</div>",
+            unsafe_allow_html=True
+        )
 
     st.markdown("<br>", unsafe_allow_html=True)
-
-    col1, col2, col3 = st.columns(3)
 
     # ==========================================
     # CONSULTA PANGEIA
