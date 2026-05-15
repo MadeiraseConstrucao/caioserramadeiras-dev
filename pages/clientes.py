@@ -26,6 +26,18 @@ def pagina_clientes(df_clientes):
         mostrar_logo(LOGO_NOME_PATH, 250)
     # ==========================================
 
+    
+    st.markdown(
+        "<div class='section-title'>👥 CONSULTA DE CLIENTES</div>",
+        unsafe_allow_html=True
+    )
+
+    busca = st.text_input(
+        "🔎 Buscar cliente",
+        key="busca_cliente",
+        placeholder="Digite nome, CNPJ..."
+    )
+
     if not busca:
 
         mostrar_sem_busca()
