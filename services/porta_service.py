@@ -3,7 +3,7 @@ import requests
 
 def enviar_pedido_porta(dados):
 
-    WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbyXnXdbyDbiwdWeOAWD3R0TowUtKClFKm6aDlv_rW9KFQf4sYYW57P-ShhVKrzRFGp08w/exec"
+    WEBHOOK_URL = "https://script.google.com/macros/s/AKfycby4LCjAR56sbnwkR_VURjRt_DoEWMXhzyXmvH4mvpuH4G_4hc0DywJPdE5YXmtfRF3Mkw/exec"
 
     response = requests.post(
         WEBHOOK_URL,
