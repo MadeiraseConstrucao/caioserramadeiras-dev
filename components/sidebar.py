@@ -33,7 +33,7 @@ def renderizar_sidebar():
             st.session_state.pagina = PAGINA_MENU
             st.rerun()
 
-        #st.markdown("---")
+        
 
         # ==========================================
         # CONSULTA PANGEIA
@@ -57,7 +57,7 @@ def renderizar_sidebar():
             st.session_state.pagina = PAGINA_PRODUTOS
             st.rerun()
 
-        #st.markdown("---")
+        
 
         # ==========================================
         # ORIENTAÇÃO PORTA
