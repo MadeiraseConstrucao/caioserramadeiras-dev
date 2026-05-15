@@ -6,6 +6,19 @@ import base64
 
 
 
+
+# ========================================
+#  CONVERTER LOGO
+# ========================================
+def imagem_base64(caminho):
+
+    with open(caminho, "rb") as imagem:
+
+        return base64.b64encode(
+            imagem.read()
+        ).decode()
+
+
 # ========================================
 #  TRATAR
 # ========================================
