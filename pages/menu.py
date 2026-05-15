@@ -1,6 +1,7 @@
 import streamlit as st
 
 from config.settings import (
+    LOGO_PATH,
     PAGINA_CLIENTES,
     PAGINA_PRODUTOS,
     PAGINA_ORIENTACAO_PORTA
@@ -12,6 +13,8 @@ from config.settings import (
 # ==========================================
 
 def pagina_menu():
+
+    mostrar_logo(LOGO_PATH, 120)
 
     st.markdown(
         "<div class='main-title'>UTILITÁRIOS MADEIRAS E CONSTRUÇÃO</div>",
