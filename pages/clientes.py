@@ -21,7 +21,7 @@ def pagina_clientes(df_clientes):
     # ==========================================
     col_logo_1, col_logo_2, col_logo_3 = st.columns([1, 1, 1])
 
-    with col_logo_1:
+    with col_logo_2:
 
         mostrar_logo(LOGO_NOME_PATH, 250)
     # ==========================================
