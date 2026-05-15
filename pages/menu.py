@@ -35,6 +35,8 @@ def pagina_menu():
 
     st.markdown("<br>", unsafe_allow_html=True)
 
+    col1, col2, col3 = st.columns(3)
+
     # ==========================================
     # CONSULTA PANGEIA
     # ==========================================
