@@ -4,6 +4,7 @@ from utils.helpers import mostrar_logo
 
 from config.settings import (
     LOGO_PATH,
+    LOGO_NOME_PATH,
     PAGINA_MENU,
     PAGINA_CLIENTES,
     PAGINA_PRODUTOS,
@@ -25,7 +26,7 @@ def pagina_menu():
 
     with col_logo_2:
 
-        mostrar_logo(LOGO_PATH, 180)
+        mostrar_logo(LOGO_NOME_PATH, 180)
 
     # ==========================================
     # TÍTULOS
