@@ -18,24 +18,40 @@ def pagina_menu():
     st.markdown(
         """
         <style>
+
         .logo-topo {
             position: absolute;
             top: 20px;
             left: 20px;
             z-index: 999;
         }
+
         </style>
         """,
         unsafe_allow_html=True
     )
 
+    # ==========================================
+    # LOGO
+    # ==========================================
+
     with st.container():
 
-        st.markdown("<div class='logo-topo'>", unsafe_allow_html=True)
+        st.markdown(
+            "<div class='logo-topo'>",
+            unsafe_allow_html=True
+        )
 
         mostrar_logo(LOGO_PATH, 120)
 
-        st.markdown("</div>", unsafe_allow_html=True)
+        st.markdown(
+            "</div>",
+            unsafe_allow_html=True
+        )
+
+    # ==========================================
+    # TÍTULOS
+    # ==========================================
 
     st.markdown(
         "<div class='main-title'>UTILITÁRIOS MADEIRAS E CONSTRUÇÃO</div>",
