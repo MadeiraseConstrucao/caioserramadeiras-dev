@@ -8,6 +8,10 @@ from utils.helpers import (
     mostrar_logo
 )
 
+from config.settings import (
+    LOGO_NOME_PATH,
+)
+
 
 # ==========================================
 # PÁGINA PRODUTOS
