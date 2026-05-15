@@ -7,14 +7,12 @@ from config.settings import (
     PAGINA_ORIENTACAO_PORTA
 )
 
-
+mostrar_logo(LOGO_PATH, 120)
 # ==========================================
 # MENU PRINCIPAL
 # ==========================================
 
 def pagina_menu():
-
-    mostrar_logo(LOGO_PATH, 120)
 
     st.markdown(
         "<div class='main-title'>UTILITÁRIOS MADEIRAS E CONSTRUÇÃO</div>",
