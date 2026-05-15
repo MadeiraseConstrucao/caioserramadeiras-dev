@@ -4,8 +4,8 @@ APP_TITLE = "Utilitários Madeiras e Construção"
 # LOGOS
 # ==========================================
 
-LOGO_PATH = "/assets/imagens/logo.png"
-LOGO_NOME_PATH = "/assets/imagens/500 X 120.png"
+LOGO_PATH = "assets/imagens/logo.png"
+LOGO_NOME_PATH = "assets/imagens/500 X 120.png"
 
 # ==========================================
 # PÁGINAS
