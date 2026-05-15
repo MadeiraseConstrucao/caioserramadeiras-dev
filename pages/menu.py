@@ -26,14 +26,14 @@ def pagina_menu():
 
     with col_logo_2:
 
-        mostrar_logo(LOGO_NOME_PATH, 180)
+        mostrar_logo(LOGO_NOME_PATH, 250)
 
     # ==========================================
     # TÍTULOS
     # ==========================================
 
     st.markdown(
-        "<div class='main-title'>UTILITÁRIOS MADEIRAS E CONSTRUÇÃO</div>",
+        "<div class='main-title'>UTILITÁRIOS</div>",
         unsafe_allow_html=True
     )
 
