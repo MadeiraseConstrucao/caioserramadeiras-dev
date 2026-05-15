@@ -1,6 +1,7 @@
 import streamlit as st
 
 from utils.helpers import mostrar_logo
+from utils.helpers import imagem_base64
 
 from config.settings import (
     LOGO_PATH,
@@ -15,79 +16,106 @@ from config.settings import (
 # MENU PRINCIPAL
 # ==========================================
 
+logo_base64 = imagem_base64(LOGO_PATH)
+
 def pagina_menu():
 
     # ==========================================
     # HEADER
     # ==========================================
 
-    col_logo, col_titulo, col_info, col_home = st.columns([1, 4, 1.2, 1])
+ st.markdown(
+    f"""
+    <style>
 
-    # LOGO
-    with col_logo:
+    .header-container {{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
 
-        mostrar_logo(LOGO_PATH, 110)
+        padding:20px 30px;
 
-    # TÍTULOS
-    with col_titulo:
+        border-radius:20px;
 
-        st.markdown(
-            """
-            <div style="padding-top:10px;">
-                <div class="main-title">
+        background: rgba(255,255,255,0.03);
+
+        border:1px solid rgba(255,255,255,0.08);
+
+        margin-bottom:30px;
+    }}
+
+    .header-left {{
+        display:flex;
+        align-items:center;
+        gap:20px;
+    }}
+
+    .header-title h1 {{
+        margin:0;
+        font-size:30px;
+    }}
+
+    .header-title p {{
+        margin:0;
+        opacity:0.7;
+        font-size:15px;
+    }}
+
+    .header-right {{
+        text-align:right;
+    }}
+
+    .version-label {{
+        font-size:13px;
+        opacity:0.6;
+    }}
+
+    .version-number {{
+        font-size:20px;
+        font-weight:bold;
+    }}
+
+    </style>
+
+    <div class="header-container">
+
+        <div class="header-left">
+
+            <img
+                src="data:image/png;base64,{logo_base64}"
+                width="90"
+            >
+
+            <div class="header-title">
+
+                <h1>
                     UTILITÁRIOS MADEIRAS E CONSTRUÇÃO
-                </div>
+                </h1>
 
-                <div class="sub-title">
+                <p>
                     Sistema interno de ferramentas
-                </div>
+                </p>
+
             </div>
-            """,
-            unsafe_allow_html=True
-        )
 
-    # VERSÃO
-    with col_info:
+        </div>
 
-        st.markdown(
-            """
-            <div style="
-                text-align:center;
-                padding-top:20px;
-            ">
-                <div style="
-                    font-size:14px;
-                    opacity:0.7;
-                ">
-                    VERSÃO
-                </div>
+        <div class="header-right">
 
-                <div style="
-                    font-size:18px;
-                    font-weight:bold;
-                ">
-                    v1.0
-                </div>
+            <div class="version-label">
+                VERSÃO
             </div>
-            """,
-            unsafe_allow_html=True
-        )
 
-    # BOTÃO HOME
-    with col_home:
+            <div class="version-number">
+                v1.0
+            </div>
 
-        st.markdown("<br>", unsafe_allow_html=True)
+        </div>
 
-        if st.button(
-            "🏠 HOME",
-            use_container_width=True
-        ):
-
-            st.session_state.pagina = PAGINA_MENU
-            st.rerun()
-
-    st.markdown("---")
-
+    </div>
+    """,
+    unsafe_allow_html=True
+)
     # ==========================================
     # CONTEÚDO
     # ==========================================
