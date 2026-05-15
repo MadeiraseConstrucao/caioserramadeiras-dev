@@ -1,8 +1,10 @@
 import streamlit as st
 
 from utils.helpers import mostrar_logo
+
 from config.settings import (
     LOGO_PATH,
+    PAGINA_MENU,
     PAGINA_CLIENTES,
     PAGINA_PRODUTOS,
     PAGINA_ORIENTACAO_PORTA
@@ -15,55 +17,80 @@ from config.settings import (
 
 def pagina_menu():
 
-    st.markdown(
-        """
-        <style>
-
-        .logo-topo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            z-index: 999;
-        }
-
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
-
     # ==========================================
+    # HEADER
+    # ==========================================
+
+    col_logo, col_titulo, col_info, col_home = st.columns([1, 4, 1.2, 1])
+
     # LOGO
-    # ==========================================
+    with col_logo:
 
-    with st.container():
+        mostrar_logo(LOGO_PATH, 110)
 
-        st.markdown(
-            "<div class='logo-topo'>",
-            unsafe_allow_html=True
-        )
-
-        mostrar_logo(LOGO_PATH, 120)
-
-        st.markdown(
-            "</div>",
-            unsafe_allow_html=True
-        )
-
-    # ==========================================
     # TÍTULOS
+    with col_titulo:
+
+        st.markdown(
+            """
+            <div style="padding-top:10px;">
+                <div class="main-title">
+                    UTILITÁRIOS MADEIRAS E CONSTRUÇÃO
+                </div>
+
+                <div class="sub-title">
+                    Sistema interno de ferramentas
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+    # VERSÃO
+    with col_info:
+
+        st.markdown(
+            """
+            <div style="
+                text-align:center;
+                padding-top:20px;
+            ">
+                <div style="
+                    font-size:14px;
+                    opacity:0.7;
+                ">
+                    VERSÃO
+                </div>
+
+                <div style="
+                    font-size:18px;
+                    font-weight:bold;
+                ">
+                    v1.0
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+
+    # BOTÃO HOME
+    with col_home:
+
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        if st.button(
+            "🏠 HOME",
+            use_container_width=True
+        ):
+
+            st.session_state.pagina = PAGINA_MENU
+            st.rerun()
+
+    st.markdown("---")
+
     # ==========================================
-
-    st.markdown(
-        "<div class='main-title'>UTILITÁRIOS MADEIRAS E CONSTRUÇÃO</div>",
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        "<div class='sub-title'>Sistema interno de ferramentas</div>",
-        unsafe_allow_html=True
-    )
-
-    st.markdown("<br>", unsafe_allow_html=True)
+    # CONTEÚDO
+    # ==========================================
 
     col1, col2, col3 = st.columns(3)
 
@@ -82,8 +109,7 @@ def pagina_menu():
             """,
             unsafe_allow_html=True
         )
-        
-        
+
         if st.button(
             "CLIENTES",
             use_container_width=True,
@@ -112,12 +138,12 @@ def pagina_menu():
             """
             <div class='menu-card'>
                 <h3>🚪 PORTAS</h3>
-                <p>Ferramentas relacionadas a portas..</p>
+                <p>Ferramentas relacionadas a portas.</p>
             </div>
             """,
             unsafe_allow_html=True
         )
-        
+
         if st.button(
             "ORIENTAÇÃO VISUAL",
             use_container_width=True,
@@ -142,8 +168,7 @@ def pagina_menu():
             """,
             unsafe_allow_html=True
         )
-        
-        
+
         st.markdown(
             """
             <div class='badge-dev'>
@@ -152,6 +177,3 @@ def pagina_menu():
             """,
             unsafe_allow_html=True
         )
-
-
-
