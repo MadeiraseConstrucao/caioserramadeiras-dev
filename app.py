@@ -31,10 +31,10 @@ from components.cards import (
     renderizar_card_produto
 )
 
-from pages.clientes import pagina_clientes
-from pages.produtos import pagina_produtos
-from pages.menu import pagina_menu
-from pages.orientacao_porta import pagina_orientacao_porta
+from views.clientes import pagina_clientes
+from views.produtos import pagina_produtos
+from views.menu import pagina_menu
+from views.orientacao_porta import pagina_orientacao_porta
 
 from components.sidebar import renderizar_sidebar
 
